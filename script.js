@@ -21,10 +21,6 @@ function clearAll() {
 }
 
 
-function delet() {
-    screen.value = input.value.substring(0, input.value.length - 1);
-  }
-
 // onclick buttons
 
 btns.addEventListener('click', (event) => {
