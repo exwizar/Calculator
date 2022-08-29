@@ -4,7 +4,7 @@ let a = '';
     finish = false;
 
 const digit = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '.'];
-const action = ['-', '+', '*', '/'];
+const action = ['-', '+', '*', '/', '**'];
 
 let btns = document.querySelector('.btns');
 let screen = document.querySelector('.calc-screen__answer');
@@ -19,11 +19,6 @@ function clearAll() {
     finish = false;
     screen.textContent = 0;
 }
-
-
-function delet() {
-    screen.value = input.value.substring(0, input.value.length - 1);
-  }
 
 // onclick buttons
 
@@ -45,6 +40,7 @@ btns.addEventListener('click', (event) => {
             b += key
             screen.textContent = b
         }
+        console.log(a)
   
     }
 
@@ -70,6 +66,10 @@ btns.addEventListener('click', (event) => {
             return screen.textContent = a;
         } else if (sign =='/') {
             a = a / b;
+            finish = true;
+            return screen.textContent = a;
+        } else if (sign == '**') {
+            a = a**a;
             finish = true;
             return screen.textContent = a;
         }
