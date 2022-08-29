@@ -20,6 +20,10 @@ function clearAll() {
     screen.textContent = 0;
 }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 99cc307c0cc1f44c14e9939ca510ae4358c99b57
 // onclick buttons
 
 btns.addEventListener('click', (event) => {
